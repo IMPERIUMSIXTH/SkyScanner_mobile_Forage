@@ -1,0 +1,25 @@
+// Project-level build.gradle (Groovy)
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Android Gradle plugin version may need to be aligned with your Android Studio.
+        // Verify and update in Android Studio (Narwhal 2025.1.1+ recommended).
+        classpath 'com.android.tools.build:gradle:8.2.0'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.10'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        // Backpack artifacts are available from Maven Central
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

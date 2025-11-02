@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Flight info card -->
+    <net.skyscanner.backpack.card.BpkCardView
+        android:id="@+id/card_flight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerStyle="large"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/tv_flight_heading"
+                style="@style/bpkTextHeading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flight AA123" />
+        </LinearLayout>
+
+    </net.skyscanner.backpack.card.BpkCardView>
+
+    <!-- Departure card -->
+    <net.skyscanner.backpack.card.BpkCardView
+        android:id="@+id/card_departure"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerStyle="large"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/card_flight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/tv_departure_code"
+                style="@style/bpkTextHeading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JFK" />
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/tv_departure_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="10:00 AM" />
+
+        </LinearLayout>
+
+    </net.skyscanner.backpack.card.BpkCardView>
+
+    <!-- Arrival card -->
+    <net.skyscanner.backpack.card.BpkCardView
+        android:id="@+id/card_arrival"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerStyle="large"
+        app:layout_constraintTop_toBottomOf="@id/card_departure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/tv_arrival_code"
+                style="@style/bpkTextHeading1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LAX" />
+
+            <net.skyscanner.backpack.text.BpkText
+                android:id="@+id/tv_arrival_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="1:00 PM" />
+
+        </LinearLayout>
+
+    </net.skyscanner.backpack.card.BpkCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
